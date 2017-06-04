@@ -1,0 +1,34 @@
+{
+  "name": "contact-app",
+  "version": "1.0.0",
+  "description": "CRUDful/RESTful/Angular/Django",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narmeen12/contactApp.git"
+  },
+  "keywords": [
+    "angular",
+    "django",
+    "node",
+    "express",
+    "python",
+    "sqlite"
+  ],
+  "author": "Narmin Shahin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narmeen12/contactApp/issues"
+  },
+  "homepage": "https://github.com/narmeen12/contactApp#readme"
+}

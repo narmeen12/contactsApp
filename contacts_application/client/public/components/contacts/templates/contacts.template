@@ -1,0 +1,12 @@
+<div ng-controller="ContactsController">
+  My Contacts
+  <div ng-repeat="contact in contactList">
+      <div style="margin-left: 20px;">
+          name: {{ contact.name }} <br/>
+          phone: {{ contact.phone_number }} <br/>
+          pic: {{ contact.pic }} <br/>
+          <hr/>
+      </div>
+  </div>
+  <br/>
+</div>
