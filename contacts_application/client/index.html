@@ -25,24 +25,25 @@
         <div class="container" ng-controller="FormController">
         <div class="col-md-5">
             <div class="form-area">
-                <form role="form">
+                <form role="form" name="infoForm" ng-submit='submit()'>
                 <br style="clear:both">
 
                   <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
             				<div class="form-group">
-        						<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+        						<input type="text" class="form-control" id="name" name="name" placeholder="Name" ng-model="name" required>
         					</div>
 
         					<div class="form-group">
-        						<input type="tel" pattern='^\+?\d{0,13}' class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+        						<input type="tel" pattern='^\+?\d{0,13}' class="form-control" id="mobile" name="mobile" placeholder="e.g.(+19739028359)" ng-model="number" required>
         					</div>
-
+                  <span>{{data.message}}</span>
+                  <br>
                   <div class="form-group">
-                    <inputtype="file"  class="form-control" name="pic" accept="image/*">
+                    <input type="file"  class="form-control" name="pic" accept="image/*">
 
                  </div>
 
-                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" ng-click="submit(name, number)">Submit Form</button>
                 </form>
             </div>
         </div>

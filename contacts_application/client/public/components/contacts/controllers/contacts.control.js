@@ -8,9 +8,33 @@ contacts
 });
 
 contacts
-    .controller('FormController', ['$scope', function($scope) {
-        $scope.message = "Hello World";
-        console.log($scope.message)
+    .controller('FormController', ['$scope','$http', function($scope,$http) {
+        $scope.data = {};
+        $scope.data.message = '';
+
+        console.log('shouldBeNull:',$scope.name,$scope.number)
+
+        $scope.submit = function(name,number) {
+
+          console.log('inSubmit:',name,number)
+
+          if(number.length <= 10) {
+            $scope.data.message = 'please enter a e.164 valid format';
+          } else {
+            $scope.data.message = '';
+          $http({
+                method:'POST',
+                url:"http://localhost:8000/contacts/:id/",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {name: name, number: number}
+            }).then(function(response) {
+                console.log('RESPONSE: ', response);
+                return response;
+            })
+          }
+      }
 }]);
 
 // contacts
