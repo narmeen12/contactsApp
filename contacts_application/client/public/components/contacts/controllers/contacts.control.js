@@ -5,10 +5,18 @@ contacts
             $scope.contactList = data;
         });
 
+          $scope.data = {}
+          $scope.data.message = '';
+
+          $scope.submit = function(name,number) {
+            ContactList.create({name:name,number,number}).$promise.then(function(resp){
+              console.log(resp)
+            })
+          }
 });
 
 contacts
-    .controller('FormController', ['$scope','$http', function($scope,$http) {
+    .controller('FormController', ['$scope','$http', function($scope,$http,) {
         $scope.data = {};
         $scope.data.message = '';
 
@@ -20,17 +28,11 @@ contacts
             $scope.data.message = 'please enter a e.164 valid format';
           } else {
             $scope.data.message = '';
-          $http({
-                method:'POST',
-                url:"http://localhost:8000/contacts",
-                headers: {
-                    'Content-Type': 'text/plain'
-                },
-                data: {name: name, number: number}
-            }).then(function(response) {
-                console.log('RESPONSE: ', response);
-                return response;
-            })
+            Form.create({name:name,number,number})
+                .$promise.then(function(data){
+                  console.log("THE DATA RESPONSE", data)
+                })
+
           }
       }
 }]);

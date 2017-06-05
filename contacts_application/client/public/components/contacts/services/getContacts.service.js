@@ -10,10 +10,16 @@ contacts
                     headers: {
                         'Content-Type':'application/json'
                     }
+                },
+                'create': {
+                  method:'POST',
+                  headers:{
+                    'Content-Type':'application/json'
+                  }
                 }
             },
             {
                 stripTrailingSlashes: false
             }
         );
-    });
+});

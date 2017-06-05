@@ -1,4 +1,4 @@
-<div ng-controller="ContactsController">
+<div>
   My Contacts
 
   <div ng-repeat="contact in contactList">

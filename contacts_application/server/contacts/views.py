@@ -9,11 +9,12 @@ class ContactViewSet(viewsets.ModelViewSet):
     serializer_class = ContactSerializer
 
     def create(self, request):
+        print("PRINTING START HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE:")
 
-        new_contact = Contact(name=self.name,phone_number=request.number,pic='/assets/images/default.jpg')
+        print(request.data['name'])
+        new_contact = Contact(name=request.data['name'],phone_number=request.data['number'],pic='/assets/images/default.jpg')
         new_contact.save()
-        print(queryset[0])
-        return queryset[0]
+        return new_contact
 
     #
     #     def retrieve(self, request, pk=None):
