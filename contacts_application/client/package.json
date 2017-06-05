@@ -4,6 +4,9 @@
   "description": "CRUDful/RESTful/Angular/Django",
   "main": "server.js",
   "dependencies": {
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4",
     "express": "^4.13.4"
   },
   "devDependencies": {

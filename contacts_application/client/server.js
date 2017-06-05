@@ -12,18 +12,6 @@ server.use(bodyParser.urlencoded({
   extended:true
 }));
 server.use(bodyParser.json());
-server.use('/', router);
-
-server.get('/getContacts', (req,res) => {
-  console.log("HEY!")
-	request.get({
-		url:'http://127.0.0.1:8000/contacts'},
-		(err,resp,body) => {
-			if(err) throw err;
-		  console.log("ERR:",err,"RESP",resp,"BODY",body);
-	})
-})
-
 
 const port = process.env.PORT || 8081;
 server.listen(port);

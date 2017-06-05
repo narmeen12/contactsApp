@@ -1,6 +1,6 @@
 angular
     .module('appRoutes', ["ui.router"])
-    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
 
     $stateProvider.state({
         name: 'contacts',
@@ -9,5 +9,8 @@ angular
         controller: 'ContactsController'
     });
 
+
     $urlRouterProvider.otherwise('/');
+
+
 }]);

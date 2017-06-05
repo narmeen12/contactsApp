@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>Contacts Application</title>
-
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <!--  Angular Setup -->
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+
 
         <!-- Application Setup -->
         <script src="public/appRoutes.js"></script>
@@ -20,8 +22,38 @@
         <script src="public/components/contacts/services/getContacts.service.js"></script>
     </head>
     <body>
-        <!-- The dynamic templates will be served within this div -->
+        <div class="container" ng-controller="FormController">
+        <div class="col-md-5">
+            <div class="form-area">
+                <form role="form">
+                <br style="clear:both">
 
+                  <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+            				<div class="form-group">
+        						<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+        					</div>
+
+        					<div class="form-group">
+        						<input type="tel" pattern='^\+?\d{0,13}' class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+        					</div>
+
+                  <div class="form-group">
+                    <inputtype="file"  class="form-control" name="pic" accept="image/*">
+
+                 </div>
+
+                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <br/>
+        <br/>
+
+      <center>
+        <!-- The dynamic templates will be served within this div -->
         <ui-view></ui-view>
+      </center>
     </body>
 </html>

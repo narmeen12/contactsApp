@@ -19,5 +19,4 @@ from contacts.views import ContactViewSet
 router = DefaultRouter()
 router.register(prefix='contacts', viewset=ContactViewSet)
 
-
 urlpatterns = router.urls
