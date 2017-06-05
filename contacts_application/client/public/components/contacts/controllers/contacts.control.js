@@ -12,8 +12,6 @@ contacts
         $scope.data = {};
         $scope.data.message = '';
 
-        console.log('shouldBeNull:',$scope.name,$scope.number)
-
         $scope.submit = function(name,number) {
 
           console.log('inSubmit:',name,number)
@@ -24,9 +22,9 @@ contacts
             $scope.data.message = '';
           $http({
                 method:'POST',
-                url:"http://localhost:8000/contacts/:id/",
+                url:"http://localhost:8000/contacts",
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'text/plain'
                 },
                 data: {name: name, number: number}
             }).then(function(response) {
@@ -36,15 +34,3 @@ contacts
           }
       }
 }]);
-
-// contacts
-//     .controller('FormController', function($scope, $http,FormInput) {
-//         $scope.data = {};
-//         $scope.info = null;
-//         $scope.submit = function() {
-//           console.log($scope.data)
-//           $http.post('http://localhost:8000/contacts/:id/')
-//
-//         }
-//
-// });
