@@ -43,18 +43,16 @@ Open a new tab in your terminal now to set up our client side and run our node s
 
 Go into the client folder and perform these two commands:
 
-```
-$ bower install
-```
-```
-$ npm install animate.css --save
-```
+```$ bower install```
+
+```$ npm install animate.css --save```
 
 From the client folder run npm start.
 
 If both Django server and Node server are running at the same time and there are no errors, you are now ready to use the app!
 
-##Usage
+## Usage
+
 Use the top contact form to enter a contact name and e.164 formatted phone number (e.g.countrycode:10-digit number)
 
 Then hit the pink add button to complete your contact submission.
