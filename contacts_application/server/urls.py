@@ -20,3 +20,6 @@ router = DefaultRouter()
 router.register(prefix='contacts', viewset=ContactViewSet)
 
 urlpatterns = router.urls
+
+
+# The code above defines a DefaultRouter and registers a URI for each of our Models along with the view.

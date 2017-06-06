@@ -26,3 +26,5 @@ class ContactViewSet(viewsets.ModelViewSet):
         print("lets delete things:",request.data)
 
         return Response({'detail': 'Contact Deleted'})
+
+# The above code defines a ContactViewSets. It is a class that comes pre-packaged with all CRUD operations and is based off the existing Contacts model.

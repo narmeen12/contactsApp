@@ -1,0 +1,69 @@
+body {
+  background: url('http://zellox.com/wp-content/uploads/2016/05/website-backgrounds-%E2%80%AB1%E2%80%AC-%E2%80%AB%E2%80%AC.jpg');o;
+  background-size: auto;
+  color:#95979b;
+  font-family: 'Exo 2', sans-serif;
+}
+
+h3 {
+
+font-family: Helvetica;
+font-weight: bold;
+margin-bottom: 25px;
+text-align: center;
+
+}
+
+li {
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.demo-list-two {
+  width: 300px;
+}
+
+
+.searchContacts {
+  display: inline-block;
+}
+
+#contactDiv {
+  margin-bottom: 0%
+}
+
+#container {
+  border:1px inset black;
+  width:600px;
+   overflow-y:scroll;
+   position:relative;
+   height: 300px;
+   box-shadow: 1px 1px 1px #888888;
+}
+
+#deleteButton {
+  background-color: white;
+  border:.5px dashed black;
+  padding:3px;
+}
+
+#deleteIcon:hover {
+  
+}
+
+#deleteContact {
+  margin-bottom: 5px;
+}
+
+#searchIcon {
+    margin-right: 5px;
+}
+
+#searchInput {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 150px;
+}
+
+#warning {
+  color:red
+}
