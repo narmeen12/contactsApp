@@ -36,8 +36,8 @@ Run this command to start your server:
 ```$ python server/manage.py runserver```
 
 If no errors, set migrate the database:
-```python server/manage.py makemigrations retail
-python server/manage.py migrate```
+```python server/manage.py makemigrations retail```
+```python server/manage.py migrate```
 
 Open a new tab in your terminal now to set up our client side and run our node server simultaneously.
 
@@ -50,6 +50,8 @@ Go into the client folder and perform these two commands:
 From the client folder run ```npm start```.
 
 If both Django server and Node server are running at the same time and there are no errors, you are now ready to use the app!
+
+You may need to include additional settings to your wsgi.py files. Ask narminshahin@gmail.com for any assistance on this.
 
 ## Usage
 
