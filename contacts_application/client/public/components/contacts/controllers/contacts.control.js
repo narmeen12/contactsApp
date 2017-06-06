@@ -1,8 +1,9 @@
+// Only one controller for this App needed. Here we have the functions that submit, create, and delete(destroy) contacts.
+
 contacts
-    .controller('ContactsController', function($scope, ContactList) {
+    .controller('ContactsController', function($scope, ContactList)
+    //Get all Contacts
         ContactList.query().$promise.then(function(data) {
-          console.log("DATA RESPONSE CONTACTS QUERY:", data);
-          console.log("LIST",ContactList)
             $scope.contactList = data;
         });
 
@@ -12,6 +13,7 @@ contacts
           $scope.data.invalidName = '';
           $scope.deleteContact = null;
 
+    //Create New Contact
           $scope.submit = function(name,number) {
             if(name === undefined) {
               $scope.data.invalidName = 'Must Enter a Contact Name'
@@ -26,7 +28,7 @@ contacts
               })
             }
           }
-
+    //Delete Contact
           $scope.destroy = function(contact) {
             console.log(contact)
             ContactList.delete(contact.number,{id:contact.id}).$promise.then(function(resp){

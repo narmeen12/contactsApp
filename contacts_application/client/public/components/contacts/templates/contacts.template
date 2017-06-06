@@ -1,14 +1,15 @@
-<div class="overflow">
-  My Contacts
-  <br>
-  <i class="material-icons">search</i>
+<!-- /*Dynamic Template used seperately for contact list.*/ -->
+<h3> My Contacts </h3>
+<div class="overflow" id="container"  id="contactDiv">
+
+  <i class="material-icons" id="searchIcon">search</i>
   <form action="#" class="searchContacts">
         <div class="mdl-textfield mdl-js-textfield">
-
-          <input class="mdl-textfield__input" type="text" id="sample1" ng-model="contactFilter">
+          <input class="mdl-textfield__input" id="searchInput" type="text" id="sample1" ng-model="contactFilter" placeholder="Search">
         </div>
       </form>
-  <div ng-repeat="contact in contactList | filter:contactFilter | orderBy :'name'">
+
+  <div ng-repeat="contact in contactList | filter:contactFilter | orderBy :'name'" >
         <ul class="demo-list-two mdl-list">
           <li class="mdl-list__item mdl-list__item--two-line">
             <span class="mdl-list__item-primary-content">
@@ -18,13 +19,13 @@
             </span>
             <span class="mdl-list__item-secondary-content">
               <span class="mdl-list__item-secondary-info" id="deleteContact">Delete Contact</span>
-
               <button class="btn" id="deleteButton" type="button" ng-click="destroy(contact)">
-              <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">delete</i></a>
+              <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons" id="deleteIcon">delete</i></a>
               </button>
             </span>
           </li>
       </ul>
   </div>
+  
   <br/>
 </div>

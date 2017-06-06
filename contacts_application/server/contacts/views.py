@@ -16,16 +16,13 @@ class ContactViewSet(viewsets.ModelViewSet):
         new_contact = Contact(name=request.data['name'],phone_number=request.data['number'],pic='/assets/images/default.jpg')
         new_contact.save()
         return redirect('/')
-        return Response({'detail': 'this works'})
+        return Response({'detail': 'Contact Created'})
 
     def delete(self,request,pk=None):
-        print("PRINTING START HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE:")
-        # to_be_removed = Contact.objects.filter()
-
 
         obj = self.queryset.get(pk=pk)
         obj.delete
 
         print("lets delete things:",request.data)
 
-        return Response({'detail': 'still not working'})
+        return Response({'detail': 'Contact Deleted'})
