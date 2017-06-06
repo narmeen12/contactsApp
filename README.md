@@ -47,7 +47,7 @@ Go into the client folder and perform these two commands:
 
 ```$ npm install animate.css --save```
 
-From the client folder run npm start.
+From the client folder run ```npm start```.
 
 If both Django server and Node server are running at the same time and there are no errors, you are now ready to use the app!
 
