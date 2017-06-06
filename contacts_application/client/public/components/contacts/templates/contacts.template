@@ -1,11 +1,14 @@
 <div>
   My Contacts
 
-  <div ng-repeat="contact in contactList">
+  <p><input type="text" ng-model="contactFilter"></p>
+  <div ng-repeat="contact in contactList | filter:contactFilter | orderBy :'name'">
       <div style="margin-left: 20px;">
+        <form>
           name: {{ contact.name }} <br/>
-          phone: {{ contact.phone_number }} <br/>
-          pic: {{ contact.pic }} <br/>
+          phone: <a href="tel:+contact.phone_number">+{{ contact.phone_number }} <br/></a>
+          <button class="btn" type="button" ng-click="destroy(contact)">Delete</button>
+        </form>
           <hr/>
       </div>
   </div>

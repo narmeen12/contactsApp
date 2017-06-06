@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:8081'
+    'localhost:8081/contacts/'
 )
 
 CORS_ALLOW_CREDENTIALS = True

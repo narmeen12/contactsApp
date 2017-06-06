@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from contacts.models import Contact
 from contacts.serializers import ContactSerializer
+from django.shortcuts import redirect
 
 class ContactViewSet(viewsets.ModelViewSet):
     """ ViewSet for viewing and editing Contact objects """
@@ -9,25 +10,22 @@ class ContactViewSet(viewsets.ModelViewSet):
     serializer_class = ContactSerializer
 
     def create(self, request):
-        print("PRINTING START HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE:")
+        print(request)
+        serializer = ContactSerializer
 
-        print(request.data['name'])
         new_contact = Contact(name=request.data['name'],phone_number=request.data['number'],pic='/assets/images/default.jpg')
         new_contact.save()
-        return new_contact
+        return redirect('/')
+        return Response({'detail': 'this works'})
 
-    #
-    #     def retrieve(self, request, pk=None):
-    #         print("retrieve:", request)
-    #
-    #         def create(self, request):
-    #             print("create:", request)
-    #
-    #             def update(self, request, pk=None):
-    #                 print("update:", request)
-    #
-    #                 def partial_update(self, request, pk=None):
-    #                     print("partial_update:", request)
-    #
-    #                     def destroy(self, request, pk=None):
-    #                         print("destroy:", request)
+    def delete(self,request,pk=None):
+        print("PRINTING START HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE:")
+        # to_be_removed = Contact.objects.filter()
+
+
+        obj = self.queryset.get(pk=pk)
+        obj.delete
+
+        print("lets delete things:",request.data)
+
+        return Response({'detail': 'still not working'})

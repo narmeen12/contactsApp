@@ -2,7 +2,7 @@ contacts
     .factory('ContactList', function($resource) {
         return $resource(
             'http://localhost:8000/contacts/:id/',
-            {},
+            {id:'@id'},
             {
                 'query': {
                     method: 'GET',
@@ -14,6 +14,12 @@ contacts
                 'create': {
                   method:'POST',
                   headers:{
+                    'Content-Type':'application/json'
+                  }
+                },
+                'delete': {
+                  method:'DELETE',
+                  headers: {
                     'Content-Type':'application/json'
                   }
                 }
