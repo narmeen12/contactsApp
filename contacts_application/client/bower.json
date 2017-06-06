@@ -1,5 +1,5 @@
 {
-  "name": "Contacts App",
+  "name": "contacts-app",
   "description": "A sample Angular application",
   "dependencies": {
     "angular": "^1.5.7",
