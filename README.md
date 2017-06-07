@@ -16,9 +16,15 @@ https://conda.io/docs/install/quick.html
 
 After Conda is installed proceed with the following commands:
 
-```$ mkvirtualenv your_env_name django
-$ pip install django==1.8.5
-$ pip install djangorestframework==3.3.0
+```
+$ conda --create env_name django
+$ source ~/miniconde3/bin/activate # This may change depending on the installation location
+```
+Once you are in the application directory enter the following commands:
+```
+$ pip install -r server/requirements.txt
+$ cd client && npm install
+$ bower install
 ```
 
 After creating your virtual environment, you can access it via these commands:
@@ -40,12 +46,6 @@ If no errors, set migrate the database:
 ```python server/manage.py migrate```
 
 Open a new tab in your terminal now to set up our client side and run our node server simultaneously.
-
-Go into the client folder and perform these two commands:
-
-```$ bower install```
-
-```$ npm install animate.css --save```
 
 From the client folder run ```npm start```.
 
