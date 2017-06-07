@@ -16,9 +16,11 @@ https://conda.io/docs/install/quick.html
 
 After Conda is installed proceed with the following commands:
 
-```$ mkvirtualenv your_env_name django
-$ pip install django==1.8.5
-$ pip install djangorestframework==3.3.0
+```
+$ conda --create env_name django
+$ source ~/miniconde3/bin/activate # This may change depending on the installation location
+$ pip install -r server/requirements.txt
+$ cd client && npm install
 ```
 
 After creating your virtual environment, you can access it via these commands:
