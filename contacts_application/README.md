@@ -33,7 +33,7 @@ On Mac/Linux:
 Activate your environment and go into the main server folder:
 
 Run this command to start your server:
-```$ python server/manage.py runserver```
+```$ python server/manage.py runserver``` 
 
 If no errors, set migrate the database:
 ```python server/manage.py makemigrations retail
