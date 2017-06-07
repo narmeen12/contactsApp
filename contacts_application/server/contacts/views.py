@@ -10,7 +10,6 @@ class ContactViewSet(viewsets.ModelViewSet):
     serializer_class = ContactSerializer
 
     def create(self, request):
-        print(request)
         serializer = ContactSerializer
 
         new_contact = Contact(name=request.data['name'],phone_number=request.data['number'],pic='/assets/images/default.jpg')
@@ -22,8 +21,6 @@ class ContactViewSet(viewsets.ModelViewSet):
 
         obj = self.queryset.get(pk=pk)
         obj.delete
-
-        print("lets delete things:",request.data)
 
         return Response({'detail': 'Contact Deleted'})
 

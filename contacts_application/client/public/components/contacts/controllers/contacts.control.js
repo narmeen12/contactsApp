@@ -23,14 +23,12 @@ contacts
               $scope.data.message = '';
               $scope.data.invalidName = '';
               ContactList.create({name:name,number:number}).$promise.then(function(resp){
-                console.log(resp)
                 window.location = '/';
               })
             }
           }
     //Delete Contact
           $scope.destroy = function(contact) {
-            console.log(contact)
             ContactList.delete(contact.number,{id:contact.id}).$promise.then(function(resp){
               window.location = '/';
             })
