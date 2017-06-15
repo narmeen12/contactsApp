@@ -23,7 +23,7 @@ $ source ~/miniconde3/bin/activate # This may change depending on the installati
 Once you are in the application directory enter the following commands:
 ```
 $ pip install -r server/requirements.txt
-$ cd client && npm install
+$ cd client && npm install (Edit: You may need to manually install body-parser, morgan, and request. e.g. npm install morgan)
 $ bower install
 ```
 
