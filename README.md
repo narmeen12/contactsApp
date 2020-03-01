@@ -51,7 +51,7 @@ From the client folder run ```npm start```.
 
 If both Django server and Node server are running at the same time and there are no errors, you are now ready to use the app!
 
-You may need to include additional settings to your wsgi.py files. Ask narminshahin@gmail.com for any assistance on this.
+You may need to include additional settings to your wsgi.py files. 
 
 ## Usage
 
