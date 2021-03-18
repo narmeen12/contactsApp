@@ -8,7 +8,7 @@ djangorestframework==3.6.3
 idna==2.5
 olefile==0.44
 packaging==16.8
-Pillow==4.1.1
+Pillow==8.1.1
 pycosat==0.6.2
 pycparser==2.17
 pyOpenSSL==17.0.0
